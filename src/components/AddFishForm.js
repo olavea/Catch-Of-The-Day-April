@@ -23,16 +23,14 @@ class AddFishForm extends React.Component{
         <form className="fish-edit" onSubmit={this.createFish}>
 
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
-        <input name="image" ref={this.imageRef} type="image" placeholder="Name" />
+        <input name="image" alt="Fish image" ref={this.imageRef} type="image" placeholder="Name" />
 
-          <select
-          <input
-          <button type="submit">+ Add Fish
+          <button type="submit">+ Add Fish</button>
         </form>
       );
   }
 }
-export default Inventory;
+export default AddFishForm;
 
 
 // import React from "react";
