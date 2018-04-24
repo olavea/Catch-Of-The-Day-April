@@ -5,22 +5,23 @@ class Header extends React.Component{
       return (
         <header className="top">
           <h1>
-            Play
+            Fish
             <span className="ofThe">
-              <span className="of">Of</span>
-              <span className="the">The</span>
+              <span className="of">Obi</span>
+              <span className="the">Wan</span>
             </span>
-            Day
+            nobi
 
-            
+
           </h1>
           <h3 className="tagline">
             <span>{this.props.tagline}</span>
           </h3>
         </header>
-      );        
+      );
   }
 }
-
+// Sea Food
+// Fish Jedi
 //A Midsummer Night's Dream
 export default Header;

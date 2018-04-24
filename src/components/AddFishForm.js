@@ -2,17 +2,22 @@ import React from "react";
 
 class AddFishForm extends React.Component{
     nameRef = React.createRef();
+    priceRef = React.createRef();
     imageRef = React.createRef();
 //pull out ... what?
     createFish = (event) => {
-      //1stop from subnitting
+      // stop the from from submitting
       event.preventDefault()
+      console.log("")
+
       const fish = {
         name: this.nameRef.value.value,
+        price: parseFloat(this.priceRef.value.value),
         image: this.imageRef.value.value
       };
-      this.props.addFish(fish); // ...and we'll pass it our fish
-      //refresh
+      console.log( "adding fisk " + fish.name )
+      this.props.formAddFish(fish); // ...and we'll pass it our fish
+      //refresh the form
       event.currentTarget.reset();
     };
       // 1
@@ -21,17 +26,42 @@ class AddFishForm extends React.Component{
     render() {
       return (
         <form className="fish-edit" onSubmit={this.createFish}>
-
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
-        <input name="image" alt="Fish image" ref={this.imageRef} type="image" placeholder="Name" />
+        <input name="price" ref={this.priceRef} type="text" placeholder="Price" />
 
-          <button type="submit">+ Add Fish</button>
+
+
+        <input
+          name="image"
+          ref={this.imageRef}
+          type="text"
+          placeholder="Image"
+        />
+
+        <button type="submit">+ Add Fish</button>
         </form>
       );
   }
 }
 export default AddFishForm;
 
+//<input name="image" alt="Fish image" ref={this.imageRef} type="image" placeholder="Name" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
 
 // import React from "react";
 
